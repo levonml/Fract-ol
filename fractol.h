@@ -1,40 +1,50 @@
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
-# define COLOR 0xff0000
-# define Z 1
-# define ZOOM 15
 # include "libft/libft.h"
 # include "mlx.h"
+# include <stdlib.h>
+# define WIDTH 1600
+# define HEIGHT 900
+# define ZOOM 0.003
+# define ZOOMIN 1.2
+# define X_POS 1000
+# define Y_POS 400
+# define ITERATION 100
 
-typedef struct		s_data
+typedef struct	s_data
 {
-	int			x;
-	int			y;
-	int			x_pos;
-	int			y_pos;
-	int			color;
-	int			count;
-	int			pixel;
-	int			pixel_bits;
-	int			line_bytes;
-	int			endian;
-  	int			iter;
-  //}					t_ints;
-//typedef	struct		s_floats
-//{
-	double			zoom;
-	float			zr;
-	float			zi;
-  	float			cx;
-  	float			cy;
-	float			zx;
-	float			zy;
-	void			*mlx;
-	void			*win;
-	void			*image;
-	char			*buffer;
-	char			*argv;
-}					t_data;
-int ft_strcmp(const char *s1, const char *s2);
+	int		x;
+	int		y;
+	int		random;
+	int		x_pos;
+	int		y_pos;
+	int		color;
+	int		count;
+	int		pixel;
+	int		pixel_bits;
+	int		line_bytes;
+	int		endian;
+	int		iter;
+	float	zoom;
+	float	zr;
+	float	zi;
+	float	cx;
+	float	cy;
+	float	zx;
+	float	zy;
+	void	*mlx;
+	void	*win;
+	void	*image;
+	char	*buffer;
+	char	*argv;
+}				t_data;
+int				key_control(int key, void *param);
+int				mouse_control(int key, int x, int y, void *param);
+void			choose_fractal(t_data *data, char *fr_type);
+void			create_julia(t_data *data);
+void			create_mandelbrot(t_data *data);
+void			drow_fractal(t_data *data);
+void			insert_text(t_data *data);
+void			scrolling_area(t_data *data);
 #endif
