@@ -10,6 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
+NAME = fractol
 SRC = main.c key_control.c mouse_control.c \
 	  choose_fractal.c create_julia.c scrolling_area.c\
 	  create_mandelbrot.c drow_fractal.c insert_text.c

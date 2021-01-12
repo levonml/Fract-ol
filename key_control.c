@@ -19,10 +19,6 @@ int	key_control(int key, void *param)
 	data = (t_data *)param;
 	if (key == 65307)
 		exit(0);
-	if (key == 49)
-		data->zoom *= ZOOMIN;
-	if (key == 50)
-		data->zoom /= ZOOMIN;
 	if (key == 65363)
 		data->x_pos += 500;
 	if (key == 65361)
