@@ -31,6 +31,7 @@ typedef struct	s_data
 	int		x_pos;
 	int		y_pos;
 	int		color;
+	int		color_change;
 	int		count;
 	int		pixel;
 	int		pixel_bits;
@@ -55,6 +56,7 @@ int				mouse_control(int key, int x, int y, void *param);
 void			choose_fractal(t_data *data, char *fr_type);
 void			create_julia(t_data *data);
 void			create_mandelbrot(t_data *data);
+void			create_burning_ship(t_data *data);
 void			drow_fractal(t_data *data);
 void			insert_text(t_data *data);
 void			scrolling_area(t_data *data);

@@ -15,17 +15,18 @@
 void	insert_text(t_data *data)
 {
 	int		i;
-	char	*str[5];
+	char	*str[6];
 
-	str[0] = "zoom in                    ---  scroll up";
-	str[1] = "zoom out                   ---  scroll down";
-	str[2] = "move right, left, up, down ---  corresponding arrows";
-	str[3] = "iteration increase         ---  i";
-	str[4] = "iteration decrease         ---  o";
+	str[0] = "zoom in            ---  scroll up";
+	str[1] = "zoom out           ---  scroll down";
+	str[2] = "move               ---  arrows";
+	str[3] = "iteration +        ---  i";
+	str[4] = "iteration -        ---  o";
+	str[5] = "color change       ---  1";
 	data->x = 50;
 	data->y = 50;
 	i = 0;
-	while (i < 5)
+	while (i < 6)
 	{
 		mlx_string_put(data->mlx, data->win, data->x,\
 		data->y, 0xffffff, str[i]);

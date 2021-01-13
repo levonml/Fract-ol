@@ -20,9 +20,12 @@ void	scrolling_area(t_data *data)
 		data->x = 50;
 		while (data->x < 300)
 		{
-			data->color = 50;
+			data->color = 255;
 			data->pixel = data->y * data->line_bytes + data->x * 4;
-			drow_fractal(data);
+			data->buffer[data->pixel + 0] = 50;
+			data->buffer[data->pixel + 1] = 50;
+			data->buffer[data->pixel + 2] = 50;
+			data->buffer[data->pixel + 3] = 0;
 			data->x++;
 		}
 		data->y++;

@@ -11,10 +11,10 @@
 # **************************************************************************** #
 
 NAME = fractol
-SRC = main.c key_control.c mouse_control.c \
+SRC = main.c key_control.c mouse_control.c void create_burning_ship.c\
 	  choose_fractal.c create_julia.c scrolling_area.c\
 	  create_mandelbrot.c drow_fractal.c insert_text.c
-OBJ = main.o key_control.o mouse_control.o\
+OBJ = main.o key_control.o mouse_control.o create_burning_ship.o\
 	  choose_fractal.o create_julia.o scrolling_area.o\
 	   create_mandelbrot.o drow_fractal.o insert_text.o
 FLAGS = -Wall -Wextra -Werror

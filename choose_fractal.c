@@ -18,10 +18,12 @@ void	choose_fractal(t_data *data, char *fr_type)
 		create_mandelbrot(data);
 	else if (ft_strcmp(fr_type, "julia") == 0)
 		create_julia(data);
+	else if (ft_strcmp(fr_type, "burning_ship") == 0)
+		create_burning_ship(data);
 	else
 	{
-		ft_putstr("wrong argument\n usage: \
-		./fractol mandelbrot or ./fractol julia\n");
+		ft_putstr("wrong argument\n usage: ./fractol mandelbrot or\
+		./fractol julia or ./fractol burning_ship\n");
 		exit(0);
 	}
 }

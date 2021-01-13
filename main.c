@@ -31,6 +31,7 @@ int	main(int argc, char **argv)
 	data->y_pos = Y_POS;
 	data->iter = ITERATION;
 	data->argv = argv[1];
+	data->color_change = 5;
 	data->buffer = mlx_get_data_addr(data->image, &(data->pixel_bits),\
 	&(data->line_bytes), &(data->endian));
 	mlx_key_hook(data->win, key_control, data);

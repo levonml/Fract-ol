@@ -21,7 +21,7 @@ static void	iterate(t_data *data)
 		data->zx = data->zr;
 		data->zy = data->zi;
 		data->count++;
-		data->color = data->color + 250;
+		data->color += data->color_change;
 		if (data->zr * data->zr + data->zi * data->zi > 4)
 			break ;
 	}
