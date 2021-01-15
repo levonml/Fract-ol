@@ -37,10 +37,10 @@ static void	iterate(t_data *data)
 void		create_burning_ship(t_data *data)
 {
 	data->y = 0;
-	while (data->y < 890)
+	while (data->y < WIDTH)
 	{
 		data->x = 0;
-		while (data->x < 1590)
+		while (data->x < HEIGHT)
 		{
 			data->count = 0;
 			data->cx = (data->x - data->x_pos + 200) * data->zoom;

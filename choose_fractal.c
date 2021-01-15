@@ -22,8 +22,8 @@ void	choose_fractal(t_data *data, char *fr_type)
 		create_burning_ship(data);
 	else
 	{
-		ft_putstr("wrong argument\n usage: ./fractol mandelbrot or\
-		./fractol julia or ./fractol burning_ship\n");
+		ft_putstr("wrong arguments\nusage: ./fractol mandelbrot or ");
+		ft_putstr("./fractol julia or ./fractol burning_ship\n");
 		exit(0);
 	}
 }

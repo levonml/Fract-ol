@@ -12,16 +12,19 @@
 
 NAME = fractol
 SRC = main.c key_control.c mouse_control.c void create_burning_ship.c\
-	  choose_fractal.c create_julia.c scrolling_area.c\
+	  choose_fractal.c create_julia.c mouse_motion.c\
 	  create_mandelbrot.c drow_fractal.c insert_text.c
 OBJ = main.o key_control.o mouse_control.o create_burning_ship.o\
-	  choose_fractal.o create_julia.o scrolling_area.o\
+	  choose_fractal.o create_julia.o mouse_motion.o\
 	   create_mandelbrot.o drow_fractal.o insert_text.o
 FLAGS = -Wall -Wextra -Werror
+
 all: $(NAME)
 fractol: $(OBJ)
 	make -C libft
-	clang  $(FLAGS) -g -o fractol $(OBJ) -L libft/ -lft -I /usr/local/include -L /usr/local/lib/ -lmlx -I /usr/include/X11 -L /usr/lib/x86_64-linux-gnu -lXext -lX11 
+	gcc -no-pie $(FLAGS) -g -o fractol $(OBJ) -L libft/ -lft -I /usr/local/include -L /usr/local/lib/ -lmlx -I /usr/include/X11 -L /usr/lib/x86_64-linux-gnu -lXext -lX11 
+# For Mac use the line bellow insteed of the line above
+#	gcc $(FLAGS)  -o fractol $(OBJ) -L libft/ -lft -I /usr/local/include -L /usr/local/lib/ -lmlx -framework OpenGL -framework AppKit
 $(OBJ): %.o: %.c fractol.h
 	clang $(FLAGS) -c $<
 

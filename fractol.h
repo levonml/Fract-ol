@@ -15,11 +15,11 @@
 # include "libft/libft.h"
 # include "mlx.h"
 # include <stdlib.h>
-# define WIDTH 1600
-# define HEIGHT 900
-# define ZOOM 0.003
+# define WIDTH 800
+# define HEIGHT 800
+# define ZOOM 0.005
 # define ZOOMIN 1.2
-# define X_POS 1000
+# define X_POS 450
 # define Y_POS 400
 # define ITERATION 100
 
@@ -53,6 +53,7 @@ typedef struct	s_data
 }				t_data;
 int				key_control(int key, void *param);
 int				mouse_control(int key, int x, int y, void *param);
+int				mouse_motion(int x, int y, void *param);
 void			choose_fractal(t_data *data, char *fr_type);
 void			create_julia(t_data *data);
 void			create_mandelbrot(t_data *data);

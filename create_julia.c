@@ -30,10 +30,10 @@ void	iterate(t_data *data)
 void	create_julia(t_data *data)
 {
 	data->y = 0;
-	while (data->y < 890)
+	while (data->y < WIDTH)
 	{
 		data->x = 0;
-		while (data->x < 1590)
+		while (data->x < HEIGHT)
 		{
 			data->count = 0;
 			data->zx = data->zoom * (data->x - data->x_pos);
@@ -46,8 +46,5 @@ void	create_julia(t_data *data)
 		}
 		data->y++;
 	}
-	scrolling_area(data);
 	mlx_put_image_to_window(data->mlx, data->win, data->image, 0, 0);
-	mlx_string_put(data->mlx, data->win, 50, 300, 0xffffff,\
-	"scroll inside the square bellow to see other options");
 }
